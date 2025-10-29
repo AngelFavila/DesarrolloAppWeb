@@ -63,7 +63,7 @@ public class TodoServicesImpl implements TodoServices {
         if(todoEntity!=null){
             todoEntity.setTitle(entity.getTitle());
             todoEntity.setDescription(entity.getDescription());
-            todoEntity.setStatus(TodoStatus.COMPLETED);
+            todoEntity.setStatus(entity.getStatus());
             todoRepository.save(todoEntity);
             return todoEntity;
         }
